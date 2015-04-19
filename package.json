@@ -23,6 +23,6 @@
   },
   "scripts": {
     "test": "mocha ./test --recursive",
-    "docs": "jsdoc ./lib --recurse"
+    "docs": "jsdoc ./lib --recurse --destination ./docs"
   }
 }

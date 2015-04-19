@@ -1,0 +1,1 @@
+[Read the docs](https://github.com/chrisdostert/NodejsDevOpSpecValidator/blob/master/docs/index.html)
