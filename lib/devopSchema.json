@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the devop"
+    },
+    "tasks": {
+      "type": "object",
+      "description": "The tasks of the devop",
+      "patternProperties": {
+        ".{1,}": {
+          "$ref": "#/definitions/Task"
+        }
+      }
+    },
+    "variables":{
+      "type":"object",
+      "description":"The variables of the devop",
+      "patternProperties":{
+        ".{1,}":{
+          "$ref":"#/definitions/Variable"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Task": {
+      "type": "object",
+      "required": [
+        "templateId",
+        "templateVersion"
+      ],
+      "properties": {
+        "isParallelExecutionEnabled": {
+          "type": "boolean",
+          "description": "Sets whether parallel execution of this task and the previous task is enabled",
+          "default": false
+        },
+        "templateId": {
+          "type": "string",
+          "description": "The id of the template this task implements"
+        },
+        "templateVersion": {
+          "type": "string",
+          "description": "The version of the template this task implements"
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The arguments which have been set for this task",
+          "items": {
+            "patternProperties": {
+              ".{1,}": {
+                "$ref": "#/definitions/TaskArgument"
+              }
+            }
+          }
+        }
+      }
+    },
+    "TaskArgument": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The value of the argument"
+        }
+      }
+    },
+    "Variable":{
+      "type":"object",
+      "properties":{
+        "value":{
+          "type":"string",
+          "description":"The value of the variable"
+        }
+      }
+    }
+  }
+}

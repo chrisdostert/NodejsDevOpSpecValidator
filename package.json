@@ -1,0 +1,28 @@
+{
+  "name": "devopspec-validator",
+  "version": "0.0.1",
+  "description": "A DevOpSpec validator",
+  "main": "./lib/useCases/index.js",
+  "author": "Chris Dostert",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisdostert/NodejsDevOpSpecValidator"
+  },
+  "dependencies": {
+    "jsonschema": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.4",
+    "mockery": "^1.4.0",
+    "node-uuid": "^1.4.3",
+    "sinon": "^1.14.1"
+  },
+  "scripts": {
+    "test": "mocha ./test --recursive",
+    "docs": "jsdoc ./lib --recurse"
+  }
+}

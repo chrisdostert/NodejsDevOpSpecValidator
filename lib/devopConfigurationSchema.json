@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "required":[
+    "name"
+  ],
+  "properties":{
+    "name":{
+      "type":"string",
+      "description":"The name of the configuration"
+    },
+    "parentName":{
+      "type":"string",
+      "description":"The name of the parent configuration of this configuration"
+    },
+    "variables":{
+      "type":"object",
+      "description":"The variables which have been set for this configuration",
+      "patternProperties":{
+        ".{1,}":{
+          "$ref":"#/definitions/Variable"
+        }
+      }
+    }
+  },
+  "definitions":{
+    "Variable":{
+      "type":"object",
+      "properties":{
+        "value":{
+          "type":"string",
+          "description":"The value of the variable"
+        }
+      }
+    }
+  }
+}
