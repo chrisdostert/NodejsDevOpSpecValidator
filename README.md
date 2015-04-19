@@ -1,3 +1,5 @@
-*****What is it?
+####What is it?
 A [DevOpSpec](http://devopspec.com/) validator for Node.js
-[Read the docs](https://rawgit.com/chrisdostert/NodejsDevOpSpecValidator/master/docs/index.html)
+
+####What's the API?
+[See the documentation](https://rawgit.com/chrisdostert/NodejsDevOpSpecValidator/master/docs/index.html)
