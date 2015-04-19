@@ -1,1 +1,1 @@
-[Read the docs](https://github.com/chrisdostert/NodejsDevOpSpecValidator/blob/master/docs/index.html)
+[Read the docs](https://rawgit.com/chrisdostert/NodejsDevOpSpecValidator/master/docs/index.html)
